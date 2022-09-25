@@ -1,2 +1,2 @@
-# lifecraft.github.io
+# LifeCraft65.github.io
 WHATTTT
