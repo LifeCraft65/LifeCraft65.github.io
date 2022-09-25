@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #01d9ff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #111;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  background: burlywood;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: red;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: sticky;
+    top: 80px;
+    left: -100%;
+    background: rgb(202, 191, 191);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.bt1 {
+  background: rgb(248, 112, 112);
+  border-radius: 6px;
+  border-color: burlywood;
+  padding: 10px;
+  width: 400px;
+  font-size: 20px;
+  transition: 1s;
+  border-style: solid ;
+}.bt1:hover {
+  background-color: rgb(95, 250, 237);
+  color: #efe1e1;
+  border-radius: 8px;
+  border-color: rgb(151, 223, 240);
+}.bt1:active {
+  border-style: solid;
+  border-radius: 1vw;
+}
+
+.d1s {
+  background: saddlebrown;
+  padding: 10px;
+  width: 300px;
+  cursor: grab;
+  border-radius: 15px;
+  color: #f2f2f2;
+  transition: 1s;
+}.d1s:hover {
+  background: seagreen;
+}.d1s:active {
+  background: rgb(233,150,122);
+}
+
+#d2s {
+  background: yellow;
+  box-shadow: -4px -3px 45px 21px rgb(255, 255, 0);
+  transition: 1s;
+}
+
+#d2s:hover {
+  background-color: yellowgreen;
+  box-shadow: -4px -3px 45px 21px rgb(154, 205, 50);
+}
+
+#i1 {
+  border-radius: 25px;
+  transition: 2s;
+}#i1:hover {
+  border-radius: 20px;
+}
+
+.table1 {
+  font-family: sans-serif;
+  color: #444;
+  border-collapse: collapse;
+  width: 50%;
+  border: 1px solid #111;
+  transition: 1s;
+}
+
+.table1 tr th{
+  box-shadow: -2px -2px 11px 15px rgb(65,105,225);
+  background: red;
+  color: #fff;
+  font-weight: normal;
+  transition: 1s;
+}
+
+.table1, th, td {
+  box-shadow: -4px -3px 45px 21px rgb(255,255,255)	;
+  padding: 8px 20px;
+  text-align: center;
+  transition: 1s;
+}
+
+.table1 tr:hover {
+  box-shadow: -4px -3px 45px 21px rgb(255,255,255)	;
+  background-color: #f5f5f5;
+}
+
+.table1 tr:nth-child(even) {
+  background-color: #f2f2f2;
+  transition: 1s;
+}
+
+#btns1 {
+  box-shadow: -4px -3px 50px 25px rgb(135,206,235);
+  background: #00BFFF;
+  padding: 8px 20px;
+  color: white;
+  transition: 1s;
+}
+
+#btns1:hover {
+  background: #B0C4DE;
+  box-shadow: -4px -3px 50px 25px rgb(65,105,225);
+}
+
+#dd1 {
+  color: #111;
+  transition: 1s;
+  width: 400px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+#dd1:hover {
+  background: #0000CD;
+  box-shadow: -4px -3px 50px 25px rgb(135,206,250);
+  padding: 8px 10px;
+  width: 400px;
+  color: white;
+  border-radius: 10px;
+}
+
+.lfred1 {
+  color: red;
+  text-shadow: 1px 1px 2px red;
+}
+
+.lfred1:hover {
+  text-shadow: 1px 1px 2px red;
+}
+
+.lfblue1 {
+  color: blue;
+  text-shadow: 1px 1px 2px blue;
+}
+
+.lfy1 {
+  text-shadow: 1px 1px 2px red;
+}
+
+.hr1 {
+  background: red;
+}
